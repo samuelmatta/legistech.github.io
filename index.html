@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legis Tech, S.A.S. de C.V. | Ingeniería Legal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0033A0', /* Azul Rey Institucional */
+                            ink: '#171717',  /* Neutral 900 para títulos */
+                            graphite: '#525252', /* Neutral 600 para textos largos */
+                            surface: '#FCFCFB', /* Blanco perla con vida, no hospital */
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(5px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FCFCFB;
+            color: #171717;
+            -webkit-font-smoothing: antialiased;
+            /* Fondo blanco "con vida": un gradiente radial muy suave en la esquina superior izquierda */
+            background-image: radial-gradient(circle at 15% 0%, rgba(0, 51, 160, 0.04) 0%, transparent 40%),
+                              radial-gradient(circle at 85% 100%, rgba(200, 200, 200, 0.05) 0%, transparent 40%);
+        }
+        
+        /* Subrayado elegante para enlaces */
+        .elegant-link {
+            text-decoration: none;
+            background-image: linear-gradient(#0033A0, #0033A0);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 1px;
+            transition: background-size 0.4s ease;
+            padding-bottom: 2px;
+        }
+        .elegant-link:hover {
+            background-size: 100% 1px;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen flex flex-col opacity-0 animate-fade-in selection:bg-brand-blue selection:text-white">
+
+    <!-- Navegación Minimalista -->
+    <nav class="w-full pt-10 pb-6 px-8 md:px-16 lg:px-24">
+        <span class="text-sm font-semibold tracking-widest uppercase text-brand-ink">
+            Legis Tech, S.A.S. de C.V.
+        </span>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="flex-grow flex flex-col justify-center px-8 md:px-16 lg:px-24 py-12">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-center">
+            
+            <!-- Columna Izquierda: Mensaje Principal -->
+            <div class="lg:col-span-7">
+                <!-- Etiqueta superior -->
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-1.5 h-1.5 rounded-full bg-brand-blue"></div>
+                    <p class="text-xs text-brand-graphite tracking-[0.2em] uppercase font-medium">
+                        Laboratorio de Ingeniería Legal
+                    </p>
+                </div>
+
+                <!-- Título Principal -->
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-brand-ink mb-10 leading-[1.15]">
+                    Infraestructura Institucional para <br class="hidden md:block" /> 
+                    <span class="text-brand-blue font-semibold">Activos del Mundo Real.</span>
+                </h1>
+                
+                <!-- Contenedor del texto -->
+                <div class="max-w-prose space-y-6">
+                    <p class="text-lg md:text-xl text-brand-graphite font-light leading-relaxed">
+                        Somos un laboratorio especializado en la digitalización y estructuración de Activos del Mundo Real (RWA). Empezamos este camino validando la tecnología internamente mediante la tokenización de nuestras propias acciones corporativas.
+                    </p>
+                    
+                    <p class="text-lg md:text-xl text-brand-ink font-normal leading-relaxed">
+                        Hoy, diseñamos infraestructura de grado institucional. Operamos de la mano de la regulación financiera con una arquitectura de <span class="font-medium text-brand-blue">cumplimiento por diseño</span>, creando las bases para expandir instrumentos tradicionales hacia mercados globales.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Información y Contacto -->
+            <div class="lg:col-span-5 flex flex-col gap-12 lg:pl-8">
+                <!-- Bloque de Estado del Proyecto (Tarjeta limpia) -->
+                <div class="bg-white border border-neutral-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-8 md:p-10">
+                    <h3 class="text-xs uppercase tracking-widest font-semibold text-brand-blue mb-4">
+                        Estado del proyecto
+                    </h3>
+                    <p class="text-sm md:text-base text-brand-graphite font-light leading-relaxed">
+                        Desarrollamos a puerta cerrada la arquitectura de nuestro próximo producto tecnológico, enfocado en la gestión y liquidez de activos en mercados regulados. El acceso inicial estará disponible próximamente mediante invitación exclusiva.
+                    </p>
+                </div>
+                
+                <!-- Contacto -->
+                <div class="pl-6 border-l border-brand-ink/10">
+                    <p class="text-[11px] text-brand-graphite uppercase tracking-widest mb-3 font-medium">Iniciemos la conversación</p>
+                    <a href="mailto:contacto@legis.tech" class="text-xl md:text-2xl font-light text-brand-ink elegant-link transition-colors hover:text-brand-blue inline-block">
+                        contacto@legis.tech
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="py-8 px-8 md:px-16 lg:px-24 mt-auto">
+        <p class="text-xs text-brand-graphite/60 font-light tracking-wide">
+            &copy; 2026 Legis Tech, S.A.S. de C.V.
+        </p>
+    </footer>
+
+</body>
+</html>
